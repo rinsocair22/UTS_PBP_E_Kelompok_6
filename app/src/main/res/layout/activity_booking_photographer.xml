@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookingPhotographerActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/teal_700">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="MANAGE BOOKING"
+            android:fontFamily="@font/autour_one"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+    </RelativeLayout>
+
+    <!-- View Booking -->
+    <RelativeLayout
+        android:id="@+id/rl_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_1">
+
+        <!-- searchView-->
+        <EditText
+            android:id="@+id/searchBookingEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:drawableStart="@drawable/ic_search_grey"
+            android:layout_toStartOf="@+id/filterDateBtn"
+            android:layout_toLeftOf="@+id/filterDateBtn"
+            android:hint="Search"
+            android:padding="10dp"
+            android:drawableLeft="@drawable/ic_search_grey"
+            />
+        <!--filter-->
+        <ImageButton
+            android:id="@+id/filterBookingBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_list"
+            android:layout_marginRight="5dp" />
+
+        <ImageButton
+            android:id="@+id/filterPackageBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_toStartOf="@id/filterBookingBtn"
+            android:layout_toLeftOf="@id/filterBookingBtn"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_package"
+            android:layout_marginRight="5dp" />
+
+        <ImageButton
+            android:id="@+id/filterDateBtn"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="7dp"
+            android:layout_toStartOf="@id/filterPackageBtn"
+            android:layout_toLeftOf="@id/filterPackageBtn"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_date" />
+
+        <!--show filtered product name-->
+
+
+
+        <TextView
+            android:id="@+id/filterBookingTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchBookingEt"
+            android:textColor="@color/black"
+            android:text="Showing All"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp" />
+
+        <!-- RecycleView: show booking -->
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/bookingRv"
+            android:layout_above="@id/bottom_navigation"
+            android:paddingBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/filterBookingTv"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_booking_photographer" />
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            app:itemBackground="@color/teal_700"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            app:menu="@menu/menu_navigation">
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

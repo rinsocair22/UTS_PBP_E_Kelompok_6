@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addPhotoActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/teal_700"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/autour_one"
+            android:text="ADD PORTFOLIO"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/photoLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/rl_1">
+
+        <ImageView
+            android:id="@+id/photo1IV"
+            android:layout_width="134dp"
+            android:layout_height="134dp"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_add_photo"/>
+
+        <ImageView
+            android:id="@+id/photo2IV"
+            android:layout_width="134dp"
+            android:layout_height="134dp"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_add_photo" />
+
+        <ImageView
+            android:id="@+id/photo3IV"
+            android:layout_width="134dp"
+            android:layout_height="134dp"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_add_photo"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/photoLL2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/photoLL">
+
+        <ImageView
+            android:id="@+id/photo4IV"
+            android:layout_width="134dp"
+            android:layout_height="134dp"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_add_photo"/>
+
+        <ImageView
+            android:id="@+id/photo5IV"
+            android:layout_width="134dp"
+            android:layout_height="134dp"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_add_photo" />
+
+        <ImageView
+            android:id="@+id/photo6IV"
+            android:layout_width="134dp"
+            android:layout_height="134dp"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_add_photo"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/infoLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/photoLL2"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/photoNameET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_package"
+            android:drawableLeft="@drawable/ic_package"
+            android:drawablePadding="5dp"
+            android:layout_margin="5dp"
+            android:hint="Album Name"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/photoInfoET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_description"
+            android:drawableLeft="@drawable/ic_description"
+            android:drawablePadding="5dp"
+            android:layout_margin="5dp"
+            android:hint="Enter Description"
+            android:inputType="textPersonName"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAddPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/infoLL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/autour_one"
+        android:text="Upload Photo"
+        app:backgroundTint="#009688" />
+
+</RelativeLayout>

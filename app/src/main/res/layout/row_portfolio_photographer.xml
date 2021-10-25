@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="1dp"
+    app:cardElevation="3dp">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/nameRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+
+        <ImageButton
+            android:id="@+id/deleteBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:src="@drawable/ic_delete"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+        <ImageButton
+            android:id="@+id/editBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:src="@drawable/ic_edit"
+            android:layout_below="@id/deleteBtn"
+            android:layout_alignParentRight="true"/>
+
+
+        <TextView
+            android:id="@+id/pfNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Album Name"
+            android:drawableStart="@drawable/ic_package"
+            android:drawableLeft="@drawable/ic_package"
+            android:drawablePadding="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pfInfoTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pfNameTv"
+            android:layout_marginTop="5dp"
+            android:text="Album Info"
+            android:drawableStart="@drawable/ic_description"
+            android:drawableLeft="@drawable/ic_description"
+            android:drawablePadding="5dp"
+            android:textStyle="bold" />
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/photoLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/nameRl"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/photo1IV"
+            android:layout_width="134dp"
+            android:layout_height="134dp"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_add_photo"/>
+
+        <ImageView
+            android:id="@+id/photo2IV"
+            android:layout_width="134dp"
+            android:layout_height="134dp"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_add_photo" />
+
+        <ImageView
+            android:id="@+id/photo3IV"
+            android:layout_width="134dp"
+            android:layout_height="134dp"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_add_photo"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/photoLL2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/photoLL"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="40dp">
+
+        <ImageView
+            android:id="@+id/photo4IV"
+            android:layout_width="134dp"
+            android:layout_height="134dp"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_add_photo"/>
+
+        <ImageView
+            android:id="@+id/photo5IV"
+            android:layout_width="134dp"
+            android:layout_height="134dp"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_add_photo" />
+
+        <ImageView
+            android:id="@+id/photo6IV"
+            android:layout_width="134dp"
+            android:layout_height="134dp"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_add_photo"/>
+    </LinearLayout>
+
+</RelativeLayout>
+</androidx.cardview.widget.CardView>

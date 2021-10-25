@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "780355151884",
+    "firebase_url": "https://photographerbookingapp.firebaseio.com",
+    "project_id": "photographerbookingapp",
+    "storage_bucket": "photographerbookingapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780355151884:android:4430cc2e8ae4693772e629",
+        "android_client_info": {
+          "package_name": "com.example.photographerbookingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780355151884-mtaq63rjq0cma2ipq6qpu6rf1961tp4l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-vh4NAUHGwcgb6e9_EICk5AHQztn4gbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780355151884-mtaq63rjq0cma2ipq6qpu6rf1961tp4l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

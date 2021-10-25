@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="1dp"
+    app:cardElevation="3dp"
+    app:contentPadding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/writeReviewBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_review"
+            android:layout_alignParentRight="true" />
+
+        <ImageButton
+            android:id="@+id/deleteBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_delete"
+            android:background="@null"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true" />
+
+        <ImageView
+            android:id="@+id/writeReviewAdded"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_review_green"
+            android:enabled="false"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/updateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="30dp"
+            android:text="Update &#10; Booking"
+            android:textSize="8sp"
+            android:fontFamily="@font/autour_one"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:backgroundTint="@color/teal_700"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/detailBtn"
+            android:layout_width="105dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/bookIconIv"
+            android:layout_margin="2dp"
+            android:minHeight="30dp"
+
+            android:text="Photographer"
+            android:textSize="8sp"
+            app:backgroundTint="@color/teal_700" />
+
+        <Button
+            android:id="@+id/packageBtn"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/detailBtn"
+            android:minHeight="30dp"
+            android:layout_margin="2dp"
+            android:text="package info"
+            android:textSize="8sp"
+            app:backgroundTint="@color/teal_700" />
+
+        <ImageView
+            android:id="@+id/bookIconIv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_booking2"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/bookIconIv"
+            android:layout_toRightOf="@+id/bookIconIv">
+
+            <TextView
+                android:id="@+id/bookDateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_date"
+                android:drawableLeft="@drawable/ic_date"
+                android:drawablePadding="5dp"
+                android:text="Booking date"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bookTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_time"
+                android:drawableLeft="@drawable/ic_time"
+                android:drawablePadding="5dp"
+                android:text="Time"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/bookLocationTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="location"
+                android:drawableStart="@drawable/ic_location"
+                android:drawableLeft="@drawable/ic_location"
+                android:drawablePadding="5dp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/bookDescriptionTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:drawableStart="@drawable/ic_description"
+                android:drawableLeft="@drawable/ic_description"
+                android:drawablePadding="5dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/bookPriceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Price"
+                android:drawableStart="@drawable/ic_price"
+                android:drawableLeft="@drawable/ic_price"
+                android:drawablePadding="5dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/bookStatusTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_status"
+                android:drawableLeft="@drawable/ic_status"
+                android:drawablePadding="5dp"
+                android:text="Book Status"
+                android:textColor="#FDD835"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/bookReviewTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_alert"
+                android:drawableLeft="@drawable/ic_alert"
+                android:drawablePadding="5dp"
+                android:text="Please review the photographer"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:visibility="invisible"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

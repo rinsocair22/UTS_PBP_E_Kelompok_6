@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddBookingActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/teal_700"
+        android:padding="10dp">
+
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/autour_one"
+            android:text="ADD BOOKING"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+    </RelativeLayout>
+    <!-- Form to input data -->
+
+    <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+        android:id="@+id/packageIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/rl_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginRight="160dp"
+        android:src="@drawable/ic_add_photo"
+        app:c_border="true"
+        app:c_border_color="@color/black"
+        app:c_border_width="1dp"/>
+
+    <EditText
+        android:id="@+id/etPackageName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/packageIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:drawableStart="@drawable/ic_package"
+        android:drawableLeft="@drawable/ic_package"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Package Name"
+        android:inputType="none"
+        android:enabled="false"/>
+
+    <EditText
+        android:id="@+id/etPackagePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPackageName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:drawableStart="@drawable/ic_price"
+        android:drawableLeft="@drawable/ic_price"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Price"
+        android:inputType="none"
+        android:enabled="false" />
+
+
+    <EditText
+        android:id="@+id/etBookingDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@id/etPackagePrice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:drawableStart="@drawable/ic_description"
+        android:drawableLeft="@drawable/ic_description"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Description..."
+        android:inputType="textMultiLine"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etBookingLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@id/etBookingDescription"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:drawableStart="@drawable/ic_location"
+        android:drawableLeft="@drawable/ic_location"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Booking Location"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_below="@+id/etBookingLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Date"
+        android:inputType="none"
+        android:focusable="false"
+        android:drawableStart="@drawable/ic_date"
+        android:drawableLeft="@drawable/ic_date"
+        android:drawablePadding="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:id="@+id/etTime"
+        android:layout_below="@+id/etDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Time"
+        android:inputType="none"
+        android:focusable="false"
+        android:drawableStart="@drawable/ic_time"
+        android:drawableLeft="@drawable/ic_time"
+        android:drawablePadding="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/btnAddBooking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etTime"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/autour_one"
+        android:text="Book Now"
+        app:backgroundTint="#009688" />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="1dp"
+    app:cardElevation="3dp"
+    app:contentPadding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:id="@+id/pgIv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_name"
+            app:c_border="true"
+            app:c_border_color="@color/teal_700"
+            app:c_border_width="2dp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="end"
+            android:numStars="5"
+            android:rating="4.5"
+            android:progressTint="#FDD835"
+            android:layout_below="@+id/pgIv"/>
+
+
+        <ImageView
+            android:id="@+id/nextIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_next"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/pgIv"
+            android:layout_toRightOf="@+id/pgIv"
+            android:layout_toStartOf="@+id/nextIv"
+            android:layout_toLeftOf="@+id/nextIv">
+
+            <TextView
+                android:id="@+id/pgNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/scada"
+                android:maxLines="1"
+                android:text="Pg Name"
+                android:drawableStart="@drawable/ic_name"
+                android:drawableLeft="@drawable/ic_name"
+                android:drawablePadding="5dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pgPhoneTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:drawableStart="@drawable/ic_call"
+                android:drawableLeft="@drawable/ic_call"
+                android:drawablePadding="5dp"
+                android:maxLines="1"
+                android:text="01X-XXX-XXX"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/pgEmailTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="1"
+                android:drawableStart="@drawable/ic_email"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="5dp"
+                android:text="Pg@email.com"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/pgLocationTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="1"
+                android:drawableStart="@drawable/ic_location"
+                android:drawableLeft="@drawable/ic_location"
+                android:drawablePadding="5dp"
+                android:text="["
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

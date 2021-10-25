@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhotographerMainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:padding="10dp">
+
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/pgIcon"
+            app:c_border="true"
+            app:c_border_color="#5E35B1"
+            android:src="@drawable/ic_name"/>
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/pgIcon"
+            android:layout_toRightOf="@+id/pgIcon"
+            android:fontFamily="@font/scada"
+            android:layout_marginLeft="5dp"
+            android:text="Full Name"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/emailTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameTv"
+            android:layout_toEndOf="@+id/pgIcon"
+            android:layout_toRightOf="@+id/pgIcon"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/scada"
+            android:text="Email"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/phoneNoTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailTv"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/pgIcon"
+            android:layout_toRightOf="@+id/pgIcon"
+            android:fontFamily="@font/scada"
+            android:text="Phone No"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/pgLocationTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneNoTv"
+            android:layout_toEndOf="@+id/pgIcon"
+            android:layout_toRightOf="@+id/pgIcon"
+            android:layout_margin="5dp"
+            android:drawableStart="@drawable/ic_location_black"
+            android:drawableLeft="@drawable/ic_location_black"
+            android:drawablePadding="1dp"
+            android:fontFamily="@font/scada"
+            android:text=""
+            android:textColor="@color/white" />
+
+
+        <ImageButton
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:onClick="logout"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_logout" />
+
+        <ImageButton
+            android:id="@+id/btnAddPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/btnLogout"
+            android:layout_toLeftOf="@id/btnLogout"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_add_photo" />
+
+        <ImageButton
+            android:id="@+id/btnAlbum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/btnAddPhoto"
+            android:layout_toLeftOf="@id/btnAddPhoto"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_photo_album" />
+
+        <!--- show photographer reviews -->
+        <ImageButton
+            android:id="@+id/reviewBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/btnAlbum"
+            android:layout_toLeftOf="@id/btnAlbum"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_comment" />
+
+        <ImageButton
+            android:id="@+id/locationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/reviewBtn"
+            android:layout_toLeftOf="@id/reviewBtn"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_location2" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rl_1"
+        android:background="#5E35B1">
+
+        <TextView
+            android:id="@+id/listPackageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/autour_one"
+            android:text="List Package"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnAddPackage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:fontFamily="@font/autour_one"
+            android:minHeight="30dip"
+            android:text="Add Package"
+            android:textSize="10sp"
+            app:backgroundTint="@color/teal_700"
+            app:iconPadding="8dp" />
+    </RelativeLayout>
+    <!-- View package -->
+    <RelativeLayout
+        android:id="@+id/rl_3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_2">
+
+        <!-- searchView-->
+        <EditText
+            android:id="@+id/searchPackageEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:drawableStart="@drawable/ic_search_grey"
+            android:layout_toStartOf="@+id/filterPackageBtn"
+            android:layout_toLeftOf="@+id/filterPackageBtn"
+            android:hint="Search"
+            android:padding="10dp"
+            android:drawableLeft="@drawable/ic_search_grey"
+             />
+        <!--filter-->
+        <ImageButton
+            android:id="@+id/filterPackageBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_list"
+            android:layout_marginRight="5dp" />
+        <!--show filtered product name-->
+        <TextView
+            android:id="@+id/filterPackageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchPackageEt"
+            android:textColor="@color/black"
+            android:text="Showing All"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp" />
+
+<!-- recycle view : show package-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/packageRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_navigation"
+            android:layout_below="@id/filterPackageTv"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_package_photographer"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            app:itemBackground="@color/teal_700"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            app:menu="@menu/menu_navigation">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhotographerDetailsActivity">
+
+    <!-- Pg details -->
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#5E35B1">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/autour_one"
+            android:text="PHOTOGRAPHER PROFILE"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+
+        android:id="@+id/pgRl"
+        android:layout_below="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/purple_500">
+
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+            android:id="@+id/pgIcon"
+            app:c_border="true"
+            app:c_border_color="#282332"
+            android:src="@drawable/ic_name" />
+
+        <TextView
+            android:id="@+id/pgNameTv"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_toEndOf="@+id/pgIcon"
+            android:layout_toRightOf="@+id/pgIcon"
+            android:fontFamily="@font/autour_one"
+            android:text="Pg Name"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/reviewBtn"
+            android:layout_toLeftOf="@id/reviewBtn"
+            android:numStars="5"
+            android:progressTint="#FDD835"
+            android:layout_margin="10dp"/>
+
+
+        <TextView
+            android:id="@+id/pgEmailTv"
+            android:layout_below="@+id/pgNameTv"
+            android:layout_toEndOf="@+id/pgIcon"
+            android:layout_toRightOf="@+id/pgIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="email"
+            android:textColor="@color/white"
+            android:layout_margin="2dp"/>
+
+        <TextView
+            android:id="@+id/pgPhoneNoTv"
+            android:layout_below="@+id/pgEmailTv"
+            android:layout_toEndOf="@+id/pgIcon"
+            android:layout_toRightOf="@+id/pgIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01x-XXX-XXXX"
+            android:textColor="@color/white"
+            android:layout_margin="2dp"/>
+
+        <TextView
+            android:id="@+id/pgTypeTv"
+            android:layout_below="@+id/pgPhoneNoTv"
+            android:layout_toEndOf="@+id/pgIcon"
+            android:layout_toRightOf="@+id/pgIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pg Type"
+            android:textColor="@color/white"
+            android:layout_margin="2dp"/>
+
+        <TextView
+            android:id="@+id/pgLocationTv"
+            android:layout_below="@+id/pgTypeTv"
+            android:layout_toEndOf="@+id/pgIcon"
+            android:layout_toRightOf="@+id/pgIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_location_black"
+            android:drawableLeft="@drawable/ic_location_black"
+            android:drawablePadding="1dp"
+            android:text="["
+            android:textColor="@color/white"
+            android:layout_margin="2dp"/>
+
+
+
+
+        <ImageButton
+            android:id="@+id/callBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/pgPhoneNoTv"
+            android:background="@null"
+            android:layout_marginLeft="4dp"
+            android:layout_below="@id/pgEmailTv"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_call"
+            android:layout_toRightOf="@id/pgPhoneNoTv" />
+
+        <!--- show photographer reviews -->
+        <ImageButton
+            android:id="@+id/reviewBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_comment"
+            android:layout_margin="5dp"/>
+
+
+        <ImageButton
+            android:id="@+id/btnAlbum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reviewBtn"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_photo_album" />
+
+
+    </RelativeLayout>
+
+    <!-- ToolBar -->
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/pgRl"
+        android:background="#5E35B1">
+
+        <TextView
+            android:id="@+id/listPackageTv"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/autour_one"
+            android:text="List Package"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+    <!-- Packages -->
+    <RelativeLayout
+        android:id="@+id/packageRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarRl">
+
+        <!--Search -->
+        <EditText
+            android:id="@+id/searchPackageEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toStartOf="@+id/filterPackageBtn"
+            android:layout_toLeftOf="@+id/filterPackageBtn"
+            android:drawableStart="@drawable/ic_search_grey"
+            android:drawableLeft="@drawable/ic_search_grey"
+            android:drawablePadding="10dp"
+            android:hint="Search"
+            android:padding="10dp"/>
+
+        <ImageButton
+            android:id="@+id/filterPackageBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_list"
+            android:background="@null"
+            android:scaleType="fitXY"/>
+        <!-- show filter package title -->
+        <TextView
+            android:id="@+id/filterPackageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchPackageEt"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Showing All"
+            android:textColor="@color/black"/>
+        
+        <!-- RecyleView : show package -->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/packageRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/filterPackageTv"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_package_client"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
